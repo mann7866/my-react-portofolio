@@ -174,7 +174,7 @@ function App() {
       {/* end proejct */}
 
       {/* start contact */}
-      <div className="contact mt-32 smp-10 p-0" id="contact">
+      {/* <div className="contact mt-32 smp-10 p-0" id="contact">
         <h1 className="text-4xl mb-2 font-bold text-center" data-aos="fade-up" data-aos-duration="1000">Kontak</h1>
         <p className="text-base/loose text-center mb-10 opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
           Mari terhubung dengan saya
@@ -232,7 +232,7 @@ function App() {
             </div>
           </div>
         </form>
-      </div>
+      </div> */}
       {/* end contact */}
     </>
   );
