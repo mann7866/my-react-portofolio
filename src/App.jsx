@@ -129,7 +129,7 @@ function App() {
 
       {/* start project */}
 
-      <div className="project mt-32 py-10" id="project">
+      {/* <div className="project mt-32 py-10" id="project">
         <h1 className="text-center text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1000">Proyek</h1>
         <p className="text-base/loose text-center opacity-50" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
           Berikut adalah beberapa proyek yang sudah saya buat
@@ -169,7 +169,7 @@ function App() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* end proejct */}
 
