@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { listTools } from "../data";
 
-const categories = ["All", "Language", "Framework", "Code Editor", "Javascript Runtime", "Repository", "Database", "Design App"];
+const categories = ["All", "Language", "Framework", "Code Editor", "Runtime Environment", "Repository", "Database", "Design App"];
 
 export default function ToolsSection() {
   const [activeTab, setActiveTab] = useState("All");

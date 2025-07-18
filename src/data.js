@@ -18,6 +18,7 @@ import Tools9 from "/assets/tools/MySQL.jpeg";
 import Tools10 from "/assets/tools/canva.png";
 import Tools11 from "/assets/tools/SQL.jpeg";
 import Tools12 from "/assets/tools/java.jpeg";
+import Tools13 from "/assets/tools/laravel.jpeg";
 
 export const listTools = [
   {
@@ -27,83 +28,93 @@ export const listTools = [
     ket: "Code Editor",
     dad: "200",
   },
-  {
+   {
     id: 2,
-    gambar: Tools2,
-    nama: "React JS",
-    ket: "Framework",
-    dad: "300",
-  },
-  {
-    id: 3,
     gambar: Tools3,
     nama: "php",
     ket: "Language",
+    dad: "300",
+  },
+   {
+    id: 3,
+    gambar: Tools12,
+    nama: "Java",
+    ket: "Language",
     dad: "400",
   },
-  {
+   {
     id: 4,
-    gambar: Tools4,
-    nama: "Tailwind CSS",
-    ket: "Framework",
+    gambar: Tools6,
+    nama: "Javascript",
+    ket: "Language",
     dad: "500",
   },
   {
     id: 5,
-    gambar: Tools5,
-    nama: "Bootstrap",
+    gambar: Tools13,
+    nama: "Laravel",
     ket: "Framework",
     dad: "600",
   },
   {
     id: 6,
-    gambar: Tools6,
-    nama: "Javascript",
-    ket: "Language",
+    gambar: Tools2,
+    nama: "React JS",
+    ket: "Framework",
     dad: "700",
   },
   {
     id: 7,
-    gambar: Tools7,
-    nama: "Node JS",
-    ket: "Javascript Runtime",
+    gambar: Tools4,
+    nama: "Tailwind CSS",
+    ket: "Framework",
     dad: "800",
   },
   {
     id: 8,
-    gambar: Tools8,
-    nama: "Github",
-    ket: "Repository",
+    gambar: Tools5,
+    nama: "Bootstrap",
+    ket: "Framework",
     dad: "900",
   },
+ 
   {
     id: 9,
-    gambar: Tools9,
-    nama: "Mysql",
-    ket: "Database",
+    gambar: Tools7,
+    nama: "Node JS",
+    ket: "Runtime Environment",
     dad: "1000",
   },
   {
     id: 10,
-    gambar: Tools10,
-    nama: "Canva",
-    ket: "Design App",
+    gambar: Tools8,
+    nama: "Github",
+    ket: "Repository",
     dad: "1100",
   },
   {
     id: 11,
-    gambar: Tools11,
-    nama: "Sql",
+    gambar: Tools9,
+    nama: "Mysql",
     ket: "Database",
     dad: "1200",
   },
+ 
   {
     id: 12,
-    gambar: Tools12,
-    nama: "Java",
-    ket: "Language",
+    gambar: Tools11,
+    nama: "Sql",
+    ket: "Database",
     dad: "1300",
   },
+   {
+    id: 13,
+    gambar: Tools10,
+    nama: "Canva",
+    ket: "Design App",
+    dad: "1400",
+  },
+ 
 ];
 
 import image_noteFound from "/assets/proyek/image_noteFound.jpeg";
