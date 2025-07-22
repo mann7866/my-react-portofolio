@@ -1,3 +1,4 @@
+import RadarParticles from "./components/RadarParticles";
 import ToolsSection from "./components/ToolsSection";
 import DataImage from "./data";
 import { listTools, listProyek } from "./data";
@@ -5,52 +6,54 @@ import { listTools, listProyek } from "./data";
 function App() {
   return (
     <>
-      <div className="hero grid md:grid-cols-2 items-center pt-10 xl:gap-0 gap-6 grid-cols-1">
-        <div className="animate__animated animate__fadeInUp animate__delay-2s">
-          <div className="flex items-center gap-3 mb-6 bg-zinc-800 w-fit p-4 rounded-2xl">
-            <img
-              loading="lazy"
-              src={DataImage.HeroImage}
-              alt="Hero Image"
-              className="w-10 rounded-md"
-            />
-            <q>kode yang indah lahir dari perasaan dalam pengerjaan.😁</q>
+      <div className="relative overflow-hidden">
+        <RadarParticles />
+        <div className="hero grid md:grid-cols-2 items-center pt-10 xl:gap-0 gap-6 grid-cols-1">
+          <div className="animate__animated animate__fadeInUp animate__delay-2s">
+            <div className="flex items-center gap-3 mb-6 bg-zinc-800 w-fit p-4 rounded-2xl">
+              <img
+                loading="lazy"
+                src={DataImage.HeroImage}
+                alt="Hero Image"
+                className="w-10 rounded-md"
+              />
+              <q>kode yang indah lahir dari perasaan dalam pengerjaan.😁</q>
+            </div>
+            <h1 className="text-5xl/tight font-bold mb-6">Hi, Saya Rohman</h1>
+            <p className="text-base/loose mb-6 opacity-50">
+              Saya adalah individu yang berdedikasi tinggi dan memiliki etos
+              kerja yang kuat. Sebagai seorang Web Developer, saya selalu
+              bersemangat dalam menjalankan setiap tanggung jawab, baik dalam
+              pengembangan antarmuka pengguna (frontend) maupun logika sistem di
+              sisi server (backend). Saya berkomitmen untuk memberikan hasil
+              terbaik dalam setiap proyek yang saya kerjakan, serta terus
+              belajar dan beradaptasi dengan perkembangan teknologi untuk
+              menghasilkan solusi digital yang optimal.
+            </p>
+            <div className="flex items-center sm:gap-4 gap-2">
+              <a
+                href="https://drive.google.com/file/d/1Ah0BTLs_K0B2RWpYCxy4b30EYKT-Rdwg/view?usp=sharing"
+                className="bg-violet-700 rounded-2xl p-4 hover:bg-violet-600"
+              >
+                Download CV <i className="ri-download-2-line ri-lg"></i>
+              </a>
+              <a
+                href="#tools"
+                className="bg-zinc-700 rounded-2xl p-4 hover:bg-zinc-600"
+              >
+                Lihat Tools <i className="ri-skip-down-line ri-lg"></i>
+              </a>
+            </div>
           </div>
-          <h1 className="text-5xl/tight font-bold mb-6">Hi, Saya Rohman</h1>
-          <p className="text-base/loose mb-6 opacity-50">
-            Saya adalah individu yang berdedikasi tinggi dan memiliki etos kerja
-            yang kuat. Sebagai seorang Web Developer, saya selalu bersemangat
-            dalam menjalankan setiap tanggung jawab, baik dalam pengembangan
-            antarmuka pengguna (frontend) maupun logika sistem di sisi server
-            (backend). Saya berkomitmen untuk memberikan hasil terbaik dalam
-            setiap proyek yang saya kerjakan, serta terus belajar dan
-            beradaptasi dengan perkembangan teknologi untuk menghasilkan solusi
-            digital yang optimal.
-          </p>
-          <div className="flex items-center sm:gap-4 gap-2">
-            <a
-              href="#"
-              className="bg-violet-700 rounded-2xl p-4 hover:bg-violet-600"
-            >
-              Download CV <i className="ri-download-2-line ri-lg"></i>
-            </a>
-            <a
-              href="#project"
-              className="bg-zinc-700 rounded-2xl p-4 hover:bg-zinc-600"
-            >
-              Lihat Proyek <i className="ri-skip-down-line ri-lg"></i>
-            </a>
-          </div>
-        </div>
-        <img
-          loading="lazy"
-          src={DataImage.HeroImage}
-          alt="Hero Image"
-          className="w-[500px] md:ml-auto rounded-lg
+          <img
+            loading="lazy"
+            src={DataImage.HeroImage}
+            alt="Hero Image"
+            className="w-[500px] md:ml-auto rounded-lg
           animate__animated animate__fadeInUp animate__delay-3s"
-        />
+          />
+        </div>
       </div>
-
       {/* start about */}
       <div className="about mt-32 py-10" id="about">
         <div
@@ -84,12 +87,12 @@ function App() {
             />
 
             <div className="flex items-center gap-6">
-              <div>
+              {/* <div>
                 <h1 className="text-4xl mb-1">
                   1 <span className="text-violet-500">+</span>
                 </h1>
                 <p>Proyek Selesai</p>
-              </div>
+              </div> */}
               <div>
                 <h1 className="text-4xl mb-1">
                   1 <span className="text-violet-500">+</span>
@@ -101,57 +104,14 @@ function App() {
         </div>
 
         {/* start tools */}
-        {/* <div className="tools mt-32">
-          <h1
-            className="text-4xl/snug font-bold mb-4"
-            data-aos="fade-right"
-            data-aos-duration="1000"
-          >
-            Tools yang dipakai
-          </h1>
-          <p
-            className="xl:w-2/5 lg:w-2/4 md:w-2/3 sm:w-3/4 w-full text-base opacity-50"
-            data-aos="fade-right"
-            data-aos-duration="1000"
-            data-aos-delay="300"
-          >
-            Berikut ini adalah beberapa tools yang saya gunakan dalam pembuatan
-            website
-          </p>
-          <div className="tools-book mt-14 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
-            {listTools.map((tool) => (
-              <div
-                className="flex items-center gap-2 p-3 border border-zinc-600 rounded-md
-               hover:bg-zinc-800 group"
-                key={tool.id}
-                data-aos="fade-right"
-                data-aos-duration="1000"
-                data-aos-delay={tool.dad}
-              >
-                <img
-                  loading="lazy"
-                  src={tool.gambar}
-                  alt="tools-image"
-                  className="w-14 bg-zinc-800 p-1 
-                group-hover:bg-zinc-900"
-                />
-                <div>
-                  <h4 className="font-bold">{tool.nama}</h4>
-                  <p className="opacity-50">{tool.ket}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div> */}
-
-        <ToolsSection/>
+        <ToolsSection />
         {/* end tools */}
       </div>
       {/* end about */}
 
       {/* start project */}
 
-      <div className="project mt-32 py-10" id="project">
+      {/* <div className="project mt-32 py-10" id="project">
         <h1
           className="text-center text-4xl font-bold mb-2"
           data-aos="fade-up"
@@ -208,7 +168,7 @@ function App() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* end proejct */}
 

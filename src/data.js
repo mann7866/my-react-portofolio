@@ -19,6 +19,10 @@ import Tools10 from "/assets/tools/canva.png";
 import Tools11 from "/assets/tools/SQL.jpeg";
 import Tools12 from "/assets/tools/java.jpeg";
 import Tools13 from "/assets/tools/laravel.jpeg";
+import Tools14 from "/assets/tools/Microsoft-Word.jpeg";
+import Tools15 from "/assets/tools/Microsoft-Excel.jpeg";
+import Tools16 from "/assets/tools/Microsoft-PowerPoint.jpeg";
+import Tools17 from "/assets/tools/Spreadsheet.jpeg";
 
 export const listTools = [
   {
@@ -27,6 +31,7 @@ export const listTools = [
     nama: "Visual Studio Code",
     ket: "Code Editor",
     dad: "200",
+    status: "I'm Expert in VS Code"
   },
    {
     id: 2,
@@ -34,6 +39,7 @@ export const listTools = [
     nama: "php",
     ket: "Language",
     dad: "300",
+    status: "I'm Expert in php"
   },
    {
     id: 3,
@@ -41,6 +47,7 @@ export const listTools = [
     nama: "Java",
     ket: "Language",
     dad: "400",
+    status: "I'm Intermediate in Java"
   },
    {
     id: 4,
@@ -48,6 +55,7 @@ export const listTools = [
     nama: "Javascript",
     ket: "Language",
     dad: "500",
+    status: "I'm Intermediate in Javascript"
   },
   {
     id: 5,
@@ -55,6 +63,7 @@ export const listTools = [
     nama: "Laravel",
     ket: "Framework",
     dad: "600",
+    status: "I'm Expert in Laravel"
   },
   {
     id: 6,
@@ -62,6 +71,7 @@ export const listTools = [
     nama: "React JS",
     ket: "Framework",
     dad: "700",
+    status: "I'm Beginner in React JS"
   },
   {
     id: 7,
@@ -69,6 +79,7 @@ export const listTools = [
     nama: "Tailwind CSS",
     ket: "Framework",
     dad: "800",
+    status: "I'm Intermediate in Tailwind CSS"
   },
   {
     id: 8,
@@ -76,6 +87,7 @@ export const listTools = [
     nama: "Bootstrap",
     ket: "Framework",
     dad: "900",
+    status: "I'm Intermediate in Boostrap"
   },
  
   {
@@ -84,6 +96,7 @@ export const listTools = [
     nama: "Node JS",
     ket: "Runtime Environment",
     dad: "1000",
+    status: "I'm Beginner in Node JS"
   },
   {
     id: 10,
@@ -91,6 +104,8 @@ export const listTools = [
     nama: "Github",
     ket: "Repository",
     dad: "1100",
+    status: "I'm Expert in Github"
+
   },
   {
     id: 11,
@@ -98,6 +113,7 @@ export const listTools = [
     nama: "Mysql",
     ket: "Database",
     dad: "1200",
+    status: "I'm Expert in Mysql"
   },
  
   {
@@ -106,6 +122,7 @@ export const listTools = [
     nama: "Sql",
     ket: "Database",
     dad: "1300",
+    status: "I'm Intermediate in Sql"
   },
    {
     id: 13,
@@ -113,6 +130,39 @@ export const listTools = [
     nama: "Canva",
     ket: "Design App",
     dad: "1400",
+    status: "I'm Expert in Canva"
+  },
+   {
+    id: 14,
+    gambar: Tools14,
+    nama: "Microsoft Word",
+    ket: "Office Application",
+    dad: "1500",
+    status: "I'm Intermediate in Microsoft Word"
+  },
+   {
+    id: 15,
+    gambar: Tools15,
+    nama: "Microsoft Excel",
+    ket: "Office Application",
+    dad: "1600",
+    status: "I'm Intermediate in Microsoft Excel"
+  },
+   {
+    id: 16,
+    gambar: Tools16,
+    nama: "Microsoft PowerPoint",
+    ket: "Office Application",
+    dad: "1700",
+    status: "I'm Beginner in Microsoft PowerPoint"
+  },
+   {
+    id: 17,
+    gambar: Tools17,
+    nama: "Spreadsheet",
+    ket: "Office Application",
+    dad: "1800",
+    status: "I'm Intermediate in Spreadsheet"
   },
  
 ];

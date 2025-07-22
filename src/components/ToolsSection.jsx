@@ -1,17 +1,28 @@
 import { useState } from "react";
 import { listTools } from "../data";
 
-const categories = ["All", "Language", "Framework", "Code Editor", "Runtime Environment", "Repository", "Database", "Design App"];
+const categories = [
+  "All",
+  "Language",
+  "Framework",
+  "Code Editor",
+  "Runtime Environment",
+  "Repository",
+  "Database",
+  "Design App",
+  "Office Application",
+];
 
 export default function ToolsSection() {
   const [activeTab, setActiveTab] = useState("All");
 
-  const filteredTools = activeTab === "All"
-    ? listTools
-    : listTools.filter((tool) => tool.ket === activeTab);
+  const filteredTools =
+    activeTab === "All"
+      ? listTools
+      : listTools.filter((tool) => tool.ket === activeTab);
 
   return (
-    <div className="tools mt-32">
+    <div id="tools" className="tools mt-32">
       <h1
         className="text-4xl/snug font-bold mb-4"
         data-aos="fade-right"
@@ -25,18 +36,27 @@ export default function ToolsSection() {
         data-aos-duration="1000"
         data-aos-delay="300"
       >
-        Berikut ini adalah beberapa tools yang saya gunakan dalam pembuatan website
+        Berikut ini adalah beberapa tools yang saya gunakan dalam pembuatan
+        website
       </p>
 
       {/* Tabs */}
+      {/* Tabs */}
       <div className="flex flex-wrap gap-2 mt-10">
-        {categories.map((category) => (
+        {categories.map((category, index) => (
           <button
             key={category}
             onClick={() => setActiveTab(category)}
             className={`px-4 py-2 rounded-full text-sm font-medium border 
-              ${activeTab === category ? "bg-zinc-800 text-white" : "bg-zinc-200 text-zinc-800"} 
-              hover:bg-zinc-700 hover:text-white transition`}
+        ${
+          activeTab === category
+            ? "bg-zinc-800 text-white"
+            : "bg-zinc-200 text-zinc-800"
+        } 
+        hover:bg-zinc-700 hover:text-white transition`}
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay={index * 100} 
           >
             {category}
           </button>

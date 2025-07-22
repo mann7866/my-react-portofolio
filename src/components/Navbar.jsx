@@ -42,11 +42,11 @@ const Navbar = () => {
             Tentang
           </a>
         </li>
-        <li>
+        {/* <li>
           <a href="#project" className="sm:text-lg text-base font-medium">
             Proyek
           </a>
-        </li>
+        </li> */}
         <li>
           <a href="#contact" className="sm:text-lg text-base font-medium">
             Kontak
