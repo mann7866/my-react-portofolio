@@ -21,9 +21,11 @@ import { PreLoader } from './components/PreLoader.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <PreLoader/>
-    <div className='container mx-auto px-4'>
+    <div className='sm:p-10 p-6 mx-auto px-4'>
     <Navbar />
     <App />
+    </div>
+    <div>
     <Footer />
     </div>
   </StrictMode>,

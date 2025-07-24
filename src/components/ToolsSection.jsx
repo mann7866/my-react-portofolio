@@ -23,22 +23,26 @@ export default function ToolsSection() {
 
   return (
     <div id="tools" className="tools mt-32">
+      <div className="text-start sm:text-center">
       <h1
         className="text-4xl/snug font-bold mb-4"
         data-aos="fade-right"
         data-aos-duration="1000"
+        data-aos-once="true"
       >
         Tools yang dipakai
       </h1>
       <p
-        className="xl:w-2/5 lg:w-2/4 md:w-2/3 sm:w-3/4 w-full text-base opacity-50"
+        className="w-full text-base opacity-50"
         data-aos="fade-right"
         data-aos-duration="1000"
         data-aos-delay="300"
+        data-aos-once="true"
       >
         Berikut ini adalah beberapa tools yang saya gunakan dalam pembuatan
         website
       </p>
+      </div>
 
       {/* Tabs */}
       {/* Tabs */}
@@ -57,6 +61,7 @@ export default function ToolsSection() {
             data-aos="fade-right"
             data-aos-duration="1000"
             data-aos-delay={index * 100} 
+            data-aos-once="true"
           >
             {category}
           </button>
@@ -72,6 +77,7 @@ export default function ToolsSection() {
             data-aos="fade-right"
             data-aos-duration="1000"
             data-aos-delay={tool.dad}
+              data-aos-once="true"
           >
             <img
               loading="lazy"
@@ -81,7 +87,8 @@ export default function ToolsSection() {
             />
             <div>
               <h4 className="font-bold">{tool.nama}</h4>
-              <p className="opacity-50">{tool.ket}</p>
+              <p className="opacity-50 experiences-text">{tool.ket}</p>
+              <p className="opacity-50 experiences-text">{tool.status}</p>
             </div>
           </div>
         ))}
