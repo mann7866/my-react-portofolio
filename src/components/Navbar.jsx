@@ -67,11 +67,11 @@ const Navbar = () => {
             Pengalaman
           </a>
         </li>
-        <li>
+        {/* <li>
           <a href="#project" className="md:text-base text-sm font-medium">
             Proyek
           </a>
-        </li>
+        </li> */}
         <li>
           <a href="#certificate" className="md:text-base text-sm font-medium">
             Sertifikat
