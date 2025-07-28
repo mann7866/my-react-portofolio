@@ -121,7 +121,7 @@ function App() {
       {/* experiences */}
 
       {/* start project */}
-      {/* <Project /> */}
+      <Project />
       {/* end proejct */}
 
       {/* start certificate */}
