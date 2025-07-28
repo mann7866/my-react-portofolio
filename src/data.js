@@ -23,6 +23,8 @@ import Tools14 from "/assets/tools/Microsoft-Word.jpeg";
 import Tools15 from "/assets/tools/Microsoft-Excel.jpeg";
 import Tools16 from "/assets/tools/Microsoft-PowerPoint.jpeg";
 import Tools17 from "/assets/tools/Spreadsheet.jpeg";
+import Tools18 from "/assets/tools/Figma.jpeg";
+
 
 export const listTools = [
   {
@@ -163,6 +165,14 @@ export const listTools = [
     ket: "Office Application",
     dad: "1800",
     status: "I'm Beginner in Spreadsheet"
+  },
+  {
+    id: 17,
+    gambar: Tools18,
+    nama: "Figma",
+    ket: "Design App",
+    dad: "1900",
+    status: "I'm Beginner in Figma"
   },
 
 ];
