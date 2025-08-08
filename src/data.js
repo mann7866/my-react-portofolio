@@ -512,3 +512,18 @@ export const imagesGallery = [
   { id: 106, img: photo106 },
   { id: 107, img: photo107 }
 ];
+
+
+import art1 from "../public/assets/art/art1.jpg"
+import art2 from "../public/assets/art/art2.jpg"
+import art3 from "../public/assets/art/art3.jpg"
+import art4 from "../public/assets/art/art4.jpg"
+import art5 from "../public/assets/art/art5.jpg"
+export const imageArt = [
+  { src: art1, alt: "Artwork 1" },
+  { src: art2, alt: "Artwork 2" },
+  { src: art3, alt: "Artwork 3" },
+  { src: art4, alt: "Artwork 4" },
+  { src: art5, alt: "Artwork 5" },
+];
+

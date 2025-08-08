@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { listTools } from "../data";
+import { listTools } from "../../../data";
 
 const categories = [
   "All",
