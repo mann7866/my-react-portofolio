@@ -1,5 +1,5 @@
 import React from "react";
-import { imagesGallery } from "../data";
+import { imagesGallery } from "../../../data";
 
 const Galleries = () => {
   console.log(imagesGallery);

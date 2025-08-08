@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaEye, FaTimes } from "react-icons/fa";
-import { experienceList, listCertificates } from "../data";
+import { experienceList, listCertificates } from "../../../data";
 
 const Experiences = () => {
   const [openIndex, setOpenIndex] = useState(null);

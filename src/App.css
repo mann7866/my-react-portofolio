@@ -1,4 +1,43 @@
+:root {
+  --color-bg: #F6F5F3;
+  --color-text-main: #2E2E2E;
+  --color-text-secondary: #927E71;
+  --color-black: #0a0a0a;
+  /* Midnight Blue */
+  --color-accent: #1ABC9C;
+  /* Emerald Green */
+  --color-hover: #6C567B;
+  /* Dusty Plum */
+}
 
+.home-page2-about {
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+}
+
+.home-page2-about p {
+  color: var(--color-text-secondary);
+}
+
+.art {
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+}
+
+.new-art {
+  background-color: var(--color-black);
+  color: white;
+}
+
+.page2-faq {
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+}
+
+.page2-contact {
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+}
 
 .scrollbar-hide::-webkit-scrollbar {
   width: 0px;
@@ -13,6 +52,226 @@
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 10px;
 }
-.experiences-text{
+
+.experiences-text {
   font-size: 12px;
+}
+
+/* page 2 css */
+
+/* home page */
+.home-page-2 .stroke-text {
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  /* warna garis stroke */
+}
+
+.home-page-2 .swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
+}
+
+.new-art h1 {
+  font-size: 15px;
+}
+
+.new-art h1 {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 640px) {
+  .new-art h1 {
+    font-size: 24px;
+    /* tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .new-art h1 {
+    font-size: 32px;
+    /* desktop */
+  }
+}
+
+.new-art p {
+  font-size: 10px;
+}
+
+@media (min-width: 640px) {
+  .new-art p {
+    font-size: 15px;
+    /* tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .new-art p {
+    font-size: 20px;
+    /* desktop */
+  }
+}
+
+.art h1 {
+  font-size: 15px;
+}
+
+.art h1 {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 640px) {
+  .art h1 {
+    font-size: 24px;
+    /* tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .art h1 {
+    font-size: 32px;
+    /* desktop */
+  }
+}
+
+.art p {
+  font-size: 10px;
+}
+
+@media (min-width: 640px) {
+  .art p {
+    font-size: 15px;
+    /* tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .art p {
+    font-size: 20px;
+    /* desktop */
+  }
+}
+
+.art .title {
+  font-size: 10px;
+}
+
+.art .title {
+  margin-top: 5px;
+}
+
+@media (min-width: 640px) {
+  .art .title {
+    font-size: 15px;
+    /* tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .art .title {
+    font-size: 25px;
+    /* desktop */
+  }
+}
+
+.art a {
+  font-size: 7px;
+  /* default untuk HP */
+}
+
+@media (min-width: 640px) {
+  .art a {
+    font-size: 15px;
+    /* tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .art a {
+    font-size: 25px;
+    /* desktop */
+  }
+}
+
+.art .order {
+  font-size: 10px;
+}
+
+@media (min-width: 570px) {
+  .art .order {
+    font-size: 16px;
+    /* tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .art .order {
+    font-size: 20px;
+    /* desktop */
+  }
+
+  .order-detail .title {
+    font-size: 15px;
+  }
+
+  .order-detail p {
+    font-size: 10px;
+  }
+
+}
+
+@media (max-width: 661px) {
+  .art .order {
+    font-size: 12px;
+    margin: 0;      /* reset margin */
+    padding: 0;     /* reset padding */
+  }
+
+  .order-detail .title {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .order-detail p {
+    font-size: 7px;
+    margin: 0;
+    padding: 0;
+  }
+  .order-detail p.description {
+  display: none;
+}
+
+}
+@media (max-width: 640px) {
+  .art .order {
+    font-size: 12px;
+    margin: 0;      /* reset margin */
+    padding: 0;     /* reset padding */
+  }
+
+  .order-detail .title {
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .order-detail p {
+    font-size: 7px;
+    margin: 0;
+    padding: 0;
+  }
+  .order-detail p.description {
+  display: none;
+}
+
+}
+
+
+/* efek order */
+.fly-img {
+  position: fixed;
+  z-index: 9999;
+  border-radius: 2%;
+  transition: all 0.8s ease-in-out;
+  pointer-events: none;
 }
