@@ -95,7 +95,7 @@ export default function Art() {
         {/* Header */}
         <div className="text-center px-6 md:px-20 mb-10">
           <h1 className="font-bold font-sans text-lg md:text-2xl">
-            Koleksi Seni Terbaru
+            Koleksi tersedia
           </h1>
           <p className="md:px-20 md:pt-2 opacity-70 text-sm md:text-base">
             Temukan berbagai karya seni yang indah dan unik untuk mempercantik
@@ -149,9 +149,7 @@ export default function Art() {
       {/* Tombol lihat semua */}
       <div className="text-center">
         <Button
-          className="bg-gray-500 py-1 px-2 md:py-2 md:px-4 lg:px-6 lg:py-2 text-sm md:text-md lg:text-lg
-          transition-colors duration-700 ease-in-out
-          hover:bg-gray-400 text-white"
+          className="text-sky-400 text-md md:text-2xl"
           text="Lihat semua"
         />
       </div>

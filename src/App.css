@@ -10,6 +10,10 @@
   /* Dusty Plum */
 }
 
+.project-sold{
+  background-color: var(--color-bg);
+}
+
 .home-page2-about {
   background-color: var(--color-bg);
   color: var(--color-text-main);
@@ -274,4 +278,99 @@
   border-radius: 2%;
   transition: all 0.8s ease-in-out;
   pointer-events: none;
+}
+
+
+.project-sold h1 {
+  font-size: 20px;
+  /* default untuk HP */
+}
+
+@media (min-width: 640px) {
+  .project-sold h1 {
+    font-size: 22px;
+    /* tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-sold h1 {
+    font-size: 25px;
+    /* desktop */
+  }
+}
+
+.project-sold .title h2 {
+  font-size: 7px;
+  /* default untuk HP */
+}
+
+@media (min-width: 640px) {
+  .project-sold .title h2 {
+    font-size: 15px;
+    /* tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-sold .title h2 {
+    font-size: 25px;
+    /* desktop */
+  }
+}
+
+.project-sold .title p {
+  font-size: 7px;
+  /* default untuk HP */
+}
+
+@media (min-width: 640px) {
+  .project-sold .title p {
+    font-size: 15px;
+    /* tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-sold .title p {
+    font-size: 25px;
+    /* desktop */
+  }
+}
+.project-sold .title button {
+  font-size: 7px;
+  /* default untuk HP */
+}
+
+@media (min-width: 640px) {
+  .project-sold .title button {
+    font-size: 15px;
+    /* tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-sold .title button {
+    font-size: 20px;
+    /* desktop */
+  }
+}
+
+.project-sold span {
+  font-size: 10px;
+  /* default untuk HP */
+}
+
+@media (min-width: 640px) {
+  .project-sold span {
+    font-size: 15px;
+    /* tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-sold span {
+    font-size: 20px;
+    /* desktop */
+  }
 }

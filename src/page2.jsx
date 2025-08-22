@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import FAQ from "./components/pages/page2/Faq";
 import ContactUs from "./components/pages/page2/ContacUs";
 import About from "./components/pages/page2/About";
+import ArtSold from "./components/pages/page2/ArtSold";
 
 export default function Page2() {
   return (
@@ -30,11 +31,12 @@ export default function Page2() {
         <NewArt/>
         <Art/>
         <Platform/>
+        <ArtSold/>
         <FAQ/>
         <ContactUs/>
       </div>
 
-
+      {/* Footer */}
       <Footer/>
     </div>
   );

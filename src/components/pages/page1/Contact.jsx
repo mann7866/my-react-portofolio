@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Contact() {
   return (
-    <div className="contact mt-32 smp-10 p-0" id="contact">
+    <div className="contact mt-32 smp-10 p-0 mb-20 md:mb-40" id="contact">
       <h1
         className="text-4xl mb-2 font-bold text-center"
         data-aos="fade-up"

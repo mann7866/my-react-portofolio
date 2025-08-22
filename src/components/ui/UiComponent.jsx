@@ -3,7 +3,7 @@ export const Button = ({ text = "Button", onClick, className = "" }) => {
     <button
       onClick={onClick}
       className={`
-        border rounded
+         rounded
        
         ${className}
       `}

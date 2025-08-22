@@ -12,10 +12,10 @@ export default function ContactUs() {
   };
 
   return (
-    <div className="page2-contact pb-20">
+    <div className="page2-contact pb-10 md:pb-20">
     <div className=" max-w-lg mx-auto py-10 md:pt-20 md:p-0 p-5">
-      <h2 className="text-2xl font-bold mb-6 text-center pb-5 md:pb-10">Kontak Saya</h2>
-      <div className="bg-white shadow-md rounded-lg p-6 space-y-4">
+      <h2 className="text-md md:text-2xl font-bold mb-6 text-center pb-5 md:pb-10">Kontak Saya</h2>
+      <div className="bg-white shadow-md rounded-lg p-6 space-y-4 text-sm md:text-md">
         <div>
           <label className="block font-medium mb-1">Nama</label>
           <input

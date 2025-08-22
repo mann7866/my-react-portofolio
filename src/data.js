@@ -33,7 +33,7 @@ export const listTools = [
     nama: "Visual Studio Code",
     ket: "Code Editor",
     dad: "200",
-    status: "I'm Expert in VS Code"
+    status: "I'm Intermediate in VS Code"
   },
   {
     id: 2,
@@ -41,7 +41,7 @@ export const listTools = [
     nama: "php",
     ket: "Language",
     dad: "300",
-    status: "I'm Expert in php"
+    status: "I'm Intermediate in php"
   },
   {
     id: 3,
@@ -49,7 +49,7 @@ export const listTools = [
     nama: "Java",
     ket: "Language",
     dad: "400",
-    status: "I'm Beginner in Java"
+    status: "I'm Intermediate in Java"
   },
   {
     id: 4,
@@ -65,7 +65,7 @@ export const listTools = [
     nama: "Laravel",
     ket: "Framework",
     dad: "600",
-    status: "I'm Expert in Laravel"
+    status: "I'm Intermediate in Laravel"
   },
   {
     id: 6,
@@ -106,7 +106,7 @@ export const listTools = [
     nama: "Github",
     ket: "Repository",
     dad: "1100",
-    status: "I'm Expert in Github"
+    status: "I'm Intermediate in Github"
 
   },
   {
@@ -115,7 +115,7 @@ export const listTools = [
     nama: "Mysql",
     ket: "Database",
     dad: "1200",
-    status: "I'm Expert in Mysql"
+    status: "I'm Intermediate in Mysql"
   },
 
   {
@@ -124,18 +124,18 @@ export const listTools = [
     nama: "Sql",
     ket: "Database",
     dad: "1300",
-    status: "I'm Intermediate in Sql"
+    status: "I'm Beginner in Sql"
   },
+  // {
+  //   id: 13,
+  //   gambar: Tools10,
+  //   nama: "Canva",
+  //   ket: "Design App",
+  //   dad: "1400",
+  //   status: "I'm Intermediate in Canva"
+  // },
   {
     id: 13,
-    gambar: Tools10,
-    nama: "Canva",
-    ket: "Design App",
-    dad: "1400",
-    status: "I'm Expert in Canva"
-  },
-  {
-    id: 14,
     gambar: Tools14,
     nama: "Microsoft Word",
     ket: "Office Application",
@@ -143,31 +143,31 @@ export const listTools = [
     status: "I'm Intermediate in M Word"
   },
   {
-    id: 15,
+    id: 14,
     gambar: Tools15,
     nama: "Microsoft Excel",
     ket: "Office Application",
     dad: "1600",
     status: "I'm Intermediate in M Excel"
   },
+  // {
+  //   id: 15,
+  //   gambar: Tools16,
+  //   nama: "Microsoft PowerPoint",
+  //   ket: "Office Application",
+  //   dad: "1700",
+  //   status: "I'm Beginner in M PowerPoint"
+  // },
   {
-    id: 16,
-    gambar: Tools16,
-    nama: "Microsoft PowerPoint",
-    ket: "Office Application",
-    dad: "1700",
-    status: "I'm Beginner in M PowerPoint"
-  },
-  {
-    id: 17,
+    id: 15,
     gambar: Tools17,
     nama: "Spreadsheet",
     ket: "Office Application",
     dad: "1800",
-    status: "I'm Beginner in Spreadsheet"
+    status: "I'm Intermediate in Spreadsheet"
   },
   {
-    id: 17,
+    id: 19,
     gambar: Tools18,
     nama: "Figma",
     ket: "Design App",

@@ -24,24 +24,25 @@ export default function ToolsSection() {
   return (
     <div id="tools" className="tools mt-32">
       <div className="text-start sm:text-center">
-      <h1
-        className="text-4xl/snug font-bold mb-4"
-        data-aos="fade-right"
-        data-aos-duration="1000"
-        data-aos-once="true"
-      >
-        Tools yang dipakai
-      </h1>
-      <p
-        className="w-full text-base opacity-50"
-        data-aos="fade-right"
-        data-aos-duration="1000"
-        data-aos-delay="300"
-        data-aos-once="true"
-      >
-        Berikut ini adalah beberapa tools yang saya gunakan dalam pembuatan
-        website
-      </p>
+        <h1
+          className="text-4xl/snug font-bold mb-4"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
+          Tools yang dipakai
+        </h1>
+        <p
+          className="w-full text-base opacity-50"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          data-aos-delay="300"
+          data-aos-once="true"
+        >
+          Berikut ini adalah beberapa tools yang saya gunakan dalam proses
+          pengembangan website, baik untuk membangun fitur secara teknis maupun
+          mengatur alur kerja dan manajemen tugas.
+        </p>
       </div>
 
       {/* Tabs */}
@@ -60,7 +61,7 @@ export default function ToolsSection() {
         hover:bg-zinc-700 hover:text-white transition`}
             data-aos="fade-right"
             data-aos-duration="1000"
-            data-aos-delay={index * 100} 
+            data-aos-delay={index * 100}
             data-aos-once="true"
           >
             {category}
@@ -77,7 +78,7 @@ export default function ToolsSection() {
             data-aos="fade-right"
             data-aos-duration="1000"
             data-aos-delay={tool.dad}
-              data-aos-once="true"
+            data-aos-once="true"
           >
             <img
               loading="lazy"

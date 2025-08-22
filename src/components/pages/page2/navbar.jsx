@@ -1,5 +1,11 @@
 import { useState, useEffect } from "react";
-import { FaBars, FaTimes, FaShoppingCart, FaTrash } from "react-icons/fa";
+import {
+  FaBars,
+  FaTimes,
+  FaShoppingCart,
+  FaTrash,
+  FaChevronDown,
+} from "react-icons/fa";
 import Img from "../../../data";
 import imgtest from "../../../../public/assets/art/art1.jpg";
 import {
@@ -12,7 +18,6 @@ const orderSchema = z.object({
   order_name: z.string().min(1, "Nama harus diisi"),
   order_note: z.string().optional(),
 });
-
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -72,12 +77,15 @@ const Navbar = () => {
   };
 
   // Kirim order via WhatsApp dengan validasi nama
- const handleSendWhatsApp = () => {
+  const handleSendWhatsApp = () => {
     // Reset error dulu
     setErrors({ order_name: "", order_note: "" });
 
     // Validasi
-    const result = orderSchema.safeParse({ order_name: orderName, order_note: orderNote });
+    const result = orderSchema.safeParse({
+      order_name: orderName,
+      order_note: orderNote,
+    });
     if (!result.success) {
       // Ambil error message dari zod
       const fieldErrors = {};
@@ -93,9 +101,11 @@ const Navbar = () => {
 
     let pesan = `Halo, saya ingin memesan:\n\n`;
     cart.forEach((item, index) => {
-      pesan += `${index + 1}. ${item.title || item.name} (${item.size || "-"}) x${
-        item.qty || 1
-      } - Rp ${(item.price * (item.qty || 1)).toLocaleString()}\n`;
+      pesan += `${index + 1}. ${item.title || item.name} (${
+        item.size || "-"
+      }) x${item.qty || 1} - Rp ${(
+        item.price * (item.qty || 1)
+      ).toLocaleString()}\n`;
     });
     pesan += `\nSubtotal: Rp ${subtotal.toLocaleString()}\n`;
     if (orderNote.trim()) pesan += `Catatan: ${orderNote.trim()}\n`;
@@ -111,25 +121,40 @@ const Navbar = () => {
       {/* Navbar */}
       <nav
         className={`navbar-page-2 group fixed z-50 transition-all duration-500 ease-in-out rounded
-          ${
-            active
-              ? "top-5 left-1/2 -translate-x-1/2 w-[90%] sm:w-[95%] md:w-full md:max-w-[780px] lg:max-w-[1200px] bg-white shadow-md h-[70px] md:h-[80px]"
-              : "top-5 left-1/2 -translate-x-1/2 bg-transparent hover:bg-white shadow-none h-[70px] md:h-[80px] w-[70px] md:w-[90px] hover:w-[90%] sm:hover:w-[95%] md:hover:w-full md:hover:max-w-[780px] lg:hover:max-w-[1200px]"
-          }`}
+      ${
+        active
+          ? "top-5 left-1/2 -translate-x-1/2 w-[90%] sm:w-[95%] md:w-full md:max-w-[780px] lg:max-w-[1200px] bg-white shadow-md h-[70px] md:h-[80px]"
+          : "top-5 left-1/2 -translate-x-1/2 bg-transparent hover:bg-white shadow-none h-[70px] md:h-[80px] w-[70px] md:w-[90px] hover:w-[90%] sm:hover:w-[95%] md:hover:w/full md:hover:max-w-[780px] lg:hover:max-w-[1200px]"
+      }`}
         onMouseLeave={() => !active && setMenuOpen(false)}
       >
         <div className="flex items-center justify-between h-full px-4 relative">
-          {/* Logo */}
-          <img
-            src={Img.HeroImage}
-            alt="Logo"
-            className="w-10 h-10 md:w-14 md:h-14 rounded-full object-contain transition-all duration-500"
-          />
+          {/* Logo + Nama */}
+          <div className="flex items-center gap-3 transition-all duration-500">
+            <img
+              src={Img.HeroImage}
+              alt="Logo"
+              className="w-10 h-10 md:w-14 md:h-14 rounded-full object-contain transition-all duration-500 flex-shrink-0"
+            />
+
+            <span
+              className={`hidden md:inline-block font-bold text-md md:text-xl text-black whitespace-nowrap overflow-hidden transition-all duration-500
+            ${
+              active
+                ? "opacity-100 max-w-[200px]"
+                : "opacity-0 max-w-0 group-hover:opacity-100 group-hover:max-w-[200px]"
+            }`}
+            >
+              Mann_Art
+            </span>
+          </div>
 
           {/* Menu Desktop */}
           <div
             className={`hidden md:flex gap-6 text-black font-semibold transition-all duration-500 ${
-              active ? "opacity-100 visible" : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"
+              active
+                ? "opacity-100 visible"
+                : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"
             }`}
           >
             <a href="#tentang">Tentang</a>
@@ -140,7 +165,9 @@ const Navbar = () => {
           {/* Tombol Cart */}
           <div
             className={`flex items-center cursor-pointer relative ${
-              active ? "opacity-100 visible" : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"
+              active
+                ? "opacity-100 visible"
+                : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"
             }`}
             onClick={() => setSidebarOpen(true)}
           >
@@ -151,21 +178,60 @@ const Navbar = () => {
               </span>
             )}
           </div>
-
-          {/* Hamburger untuk HP */}
-          <button
-            className={`md:hidden text-black text-2xl transition-opacity duration-300 ${
-              active ? "opacity-100" : "opacity-0 group-hover:opacity-100"
-            }`}
-            onClick={() => {
-              setMenuSidebarOpen((prev) => !prev);
-              setMenuOpen((prev) => !prev);
-            }}
-          >
-            {menuSidebarOpen ? <FaTimes /> : <FaBars />}
-          </button>
         </div>
       </nav>
+
+      {/* Tombol Hamburger di bawah navbar */}
+      <div
+        className={`fixed top-[calc(5px+70px)] left-1/2 -translate-x-1/2 w-[70px] md:w-[90px] bg-white rounded-b-md shadow-md flex justify-center items-center md:hidden z-50
+      transition-all duration-300 ease-in-out
+      ${active ? "opacity-100" : "opacity-0 group-hover:opacity-100"}
+    `}
+      >
+        <button
+          className="text-black text-2xl flex items-center justify-center"
+          onClick={() => setMenuOpen((prev) => !prev)}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+        >
+          {menuOpen ? <FaChevronDown /> : <FaBars />}
+        </button>
+      </div>
+
+      {/* Dropdown Menu Mobile (turun dari bawah tombol hamburger) */}
+      <div
+        className={`md:hidden fixed top-[calc(5px+70px+40px)] left-1/2 -translate-x-1/2 bg-white shadow-lg rounded-b-md overflow-hidden transition-max-height duration-300 ease-in-out z-40
+      ${
+        menuOpen
+          ? "max-h-60 w-1000 opacity-100"
+          : "max-h-0 opacity-0 pointer-events-none"
+      }
+    `}
+        style={{ transitionProperty: "max-height, opacity", width: "350px" }}
+      >
+        <nav className="flex flex-col p-4 gap-4 font-semibold text-lg">
+          <a
+            href="#tentang"
+            onClick={() => setMenuOpen(false)}
+            className="hover:text-blue-500"
+          >
+            Tentang
+          </a>
+          <a
+            href="#layanan"
+            onClick={() => setMenuOpen(false)}
+            className="hover:text-blue-500"
+          >
+            Layanan
+          </a>
+          <a
+            href="#kontak"
+            onClick={() => setMenuOpen(false)}
+            className="hover:text-blue-500"
+          >
+            Kontak
+          </a>
+        </nav>
+      </div>
 
       {/* Overlay Sidebar Menu */}
       {menuSidebarOpen && (
@@ -191,9 +257,27 @@ const Navbar = () => {
           ✕
         </button>
         <nav className="flex flex-col p-6 pt-16 gap-4 font-semibold text-lg">
-          <a href="#tentang" onClick={() => setMenuSidebarOpen(false)} className="hover:text-blue-500">Tentang</a>
-          <a href="#layanan" onClick={() => setMenuSidebarOpen(false)} className="hover:text-blue-500">Layanan</a>
-          <a href="#kontak" onClick={() => setMenuSidebarOpen(false)} className="hover:text-blue-500">Kontak</a>
+          <a
+            href="#tentang"
+            onClick={() => setMenuSidebarOpen(false)}
+            className="hover:text-blue-500"
+          >
+            Tentang
+          </a>
+          <a
+            href="#layanan"
+            onClick={() => setMenuSidebarOpen(false)}
+            className="hover:text-blue-500"
+          >
+            Layanan
+          </a>
+          <a
+            href="#kontak"
+            onClick={() => setMenuSidebarOpen(false)}
+            className="hover:text-blue-500"
+          >
+            Kontak
+          </a>
         </nav>
       </div>
 
@@ -208,7 +292,9 @@ const Navbar = () => {
       {/* Sidebar Keranjang */}
       <div
         className={`fixed top-0 right-0 h-full md:w-[500px] w-[300px] bg-white shadow-lg z-50 transform transition-transform duration-500 ${
-          sidebarOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0 pointer-events-none"
+          sidebarOpen
+            ? "translate-x-0 opacity-100"
+            : "translate-x-full opacity-0 pointer-events-none"
         }`}
       >
         <button
@@ -223,11 +309,12 @@ const Navbar = () => {
           <h2 className="md:text-lg text-md font-bold mb-4">Order Now</h2>
           <div className="flex justify-between mb-2">
             <p className="md:text-lg text-md">Subtotal :</p>
-            <p className="font-semibold md:text-lg text-md">Rp {subtotal.toLocaleString()} IDR</p>
+            <p className="font-semibold md:text-lg text-md">
+              Rp {subtotal.toLocaleString()} IDR
+            </p>
           </div>
 
           {/* Input Nama */}
-             {/* Input Nama */}
           <label htmlFor="order-name" className="block mb-1 font-semibold">
             Nama <span className="text-red-600">*</span>:
           </label>
@@ -235,7 +322,9 @@ const Navbar = () => {
             type="text"
             id="order-name"
             name="order_name"
-            className={`p-2 mb-1 border ${errors.order_name ? "border-red-600" : "border-gray-900"} w-full`}
+            className={`p-2 mb-1 border ${
+              errors.order_name ? "border-red-600" : "border-gray-900"
+            } w-full`}
             value={orderName}
             onChange={(e) => setOrderName(e.target.value)}
             placeholder="Masukkan nama Anda"
@@ -245,10 +334,14 @@ const Navbar = () => {
           )}
 
           {/* Input Note */}
-          <label htmlFor="order-note" className="block mb-1 font-semibold">Note :</label>
+          <label htmlFor="order-note" className="block mb-1 font-semibold">
+            Note :
+          </label>
           <textarea
             name="order_note"
-            className={`p-2 mb-4 border ${errors.order_note ? "border-red-600" : "border-gray-900"} text-sm resize-none w-full`}
+            className={`p-2 mb-4 border ${
+              errors.order_note ? "border-red-600" : "border-gray-900"
+            } text-sm resize-none w-full`}
             id="order-note"
             rows={10}
             value={orderNote}
@@ -273,7 +366,10 @@ const Navbar = () => {
             {cart.length === 0 ? (
               <p className="text-sm md:text-md">Keranjang kosong</p>
             ) : (
-              <button className="text-red-600 text-sm md:text-md" onClick={handleDeleteAllCart}>
+              <button
+                className="text-red-600 text-sm md:text-md"
+                onClick={handleDeleteAllCart}
+              >
                 Hapus semua
               </button>
             )}
@@ -294,18 +390,24 @@ const Navbar = () => {
                   />
                   <div className="order-detail">
                     <div className="title flex justify-between">
-                      <h1 className="font-semibold">{item.title || item.name}</h1>
+                      <h1 className="font-semibold">
+                        {item.title || item.name}
+                      </h1>
                       <div className="text-right font-semibold">
                         Rp {(item.price * (item.qty || 1)).toLocaleString()} IDR
                       </div>
                     </div>
                     {item.description && (
-                      <p className="description grid grid-cols-2 text-sm">{item.description}</p>
+                      <p className="description grid grid-cols-2 text-sm">
+                        {item.description}
+                      </p>
                     )}
                     {item.size && (
                       <div className="flex justify-between items-center mt-2">
                         <div>
-                          <p className="font-semibold md:pt-2">Paper Size ({item.size}):</p>
+                          <p className="font-semibold md:pt-2">
+                            Paper Size ({item.size}):
+                          </p>
                           <p>{item.size === "-" ? "N/A" : item.size}</p>
                         </div>
                         <button

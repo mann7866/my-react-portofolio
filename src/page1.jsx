@@ -94,13 +94,15 @@ export default function Page1() {
               <p className="text-base/loose mb-10">
                 Saya adalah individu yang berdedikasi tinggi dengan etos kerja
                 yang kuat. Sebagai seorang Web Developer, saya memiliki semangat
-                besar dalam menyelesaikan setiap tanggung jawab, baik dalam
-                membangun antarmuka pengguna (frontend) maupun mengelola logika
-                sistem di sisi server (backend). Saya berkomitmen untuk selalu
-                memberikan hasil terbaik dalam setiap proyek yang saya kerjakan.
-                Selain itu, saya terus belajar dan mengikuti perkembangan
-                teknologi agar dapat menciptakan solusi digital yang efektif,
-                efisien, dan sesuai dengan kebutuhan pengguna.
+                besar dalam membangun antarmuka pengguna (frontend) maupun
+                mengelola logika sistem di sisi server (backend). Selain itu,
+                saya juga seorang seniman rumahan yang gemar menciptakan karya
+                seni gambar sebagai bentuk ekspresi kreatif. Perpaduan antara
+                kemampuan teknis dan seni ini membuat saya mampu menghadirkan
+                solusi digital yang tidak hanya fungsional, tetapi juga memiliki
+                sentuhan estetika. Saya berkomitmen untuk terus belajar,
+                berkembang, dan memberikan hasil terbaik dalam setiap proyek
+                yang saya kerjakan.
               </p>
               <div className="flex items-center justify-between ">
                 <img
