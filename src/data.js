@@ -178,6 +178,7 @@ export const listTools = [
 ];
 
 import image_noteFound from "/assets/proyek/image_noteFound.jpeg";
+import eighteesSticker from "/assets/proyek/eighteesSticker.png";
 import Proyek2 from "/assets/proyek/proyek2.webp";
 import Proyek3 from "/assets/proyek/proyek3.webp";
 import Proyek4 from "/assets/proyek/proyek4.webp";
@@ -188,11 +189,12 @@ export const listProyek = [
 
   {
     id: 1,
-    gambar: image_noteFound,
-    nama: "Note Found",
-    desk: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, laborum!",
-    tools: ["HTML", "CSS", "Javascript", "AOS"],
+    gambar: eighteesSticker,
+    nama: "Eighteen Sticker",
+    desk:  "Eighteen Sticker adalah situs portofolio untuk usaha percetakan stiker dan merchandise. Di sini kamu bisa melihat layanan cetak stiker custom, produk merchandise, portofolio proyek sebelumnya, serta informasi kontak untuk pemesanan.",
+    tools: ["HTML", "CSS", "React Js", "Vite"],
     dad: "200",
+    link: "https://eighteensticker.netlify.app/",
   },
   // {
   //   id: 1,
@@ -284,6 +286,12 @@ export const experienceList = [
         description:
           "Program Kelas Industri di Hummatech diselenggarakan sebagai upaya untuk meningkatkan kompetensi siswa Sekolah Menengah Kejuruan (SMK) melalui pembelajaran yang berorientasi pada kebutuhan industri. Dalam program ini, saya mendapat kehormatan untuk berperan sebagai mentor, memberikan materi pembelajaran pemrograman web dasar kepada para siswa. Materi yang disampaikan mencakup penggunaan bahasa pemrograman Java, HTML, CSS, JavaScript, serta pemanfaatan framework seperti Bootstrap dan Laravel. Inisiatif ini bertujuan untuk menjembatani kesenjangan antara pengetahuan akademis dan kebutuhan praktis di dunia industri, sehingga para siswa diharapkan memiliki keterampilan yang relevan dan siap bersaing di dunia kerja setelah lulus.",
         img: [photoKelasIndustri2, photoKelasIndustri3]
+      },
+      {
+        position: "Backend Developer",
+        description:
+          "Di PT Hummatech saya berperan sebagai Backend Developer dan terlibat dalam pengembangan produk LMS. Selain itu, saya juga bergabung dalam tim GetSkill sebagai Backend sekaligus Frontend Developer.",
+        img: []
       },
       {
         position: "Ketua Magang",

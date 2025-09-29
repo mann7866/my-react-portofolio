@@ -19,6 +19,27 @@
   color: var(--color-text-main);
 }
 
+.order-new-page2{
+  color: var(--color-text-main);
+  /* background-color: var(--color-text-secondary); */
+}
+@media (min-width: 640px) {
+  .order-new-page2:hover{
+    color: white;
+    background-color: var(--color-text-secondary);
+    padding: 5px;
+    border-radius: 3px;
+    transform: scale(1.00); /* Contoh: memperbesar elemen sedikit */
+    transition: all 0.3s ease; /* Contoh: menambahkan transisi halus */
+  }
+}
+@media (min-width: 20px) {
+  .order-new-page2:hover{
+    transform: scale(1.25); /* Contoh: memperbesar elemen sedikit */
+    transition: all 0.3s ease; /* Contoh: menambahkan transisi halus */
+  }
+}
+
 .home-page2-about p {
   color: var(--color-text-secondary);
 }

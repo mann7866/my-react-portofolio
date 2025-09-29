@@ -15,12 +15,12 @@ import Footer from "./components/Footer";
 export default function Page1() {
   return (
     <div className="bg-zinc-900 text-white h-full relative">
-      <Link
+      {/* <Link
         to="/mann_art"
         className="fixed z-10 top-1/2 right-4 -translate-y-1/2 bg-white text-black p-3 rounded-full shadow-xl"
       >
         ➡️
-      </Link>
+      </Link> */}
       <>
         {/* Navbar */}
         <Navbar />

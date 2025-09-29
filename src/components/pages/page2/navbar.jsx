@@ -1,11 +1,5 @@
 import { useState, useEffect } from "react";
-import {
-  FaBars,
-  FaTimes,
-  FaShoppingCart,
-  FaTrash,
-  FaChevronDown,
-} from "react-icons/fa";
+import { FaBars, FaOpencart, FaTrash, FaChevronDown } from "react-icons/fa";
 import Img from "../../../data";
 import imgtest from "../../../../public/assets/art/art1.jpg";
 import {
@@ -120,7 +114,7 @@ const Navbar = () => {
     <>
       {/* Navbar */}
       <nav
-        className={`navbar-page-2 group fixed z-50 transition-all duration-500 ease-in-out rounded
+        className={`navbar-page-2 group fixed z-50 transition-all duration-500 ease-in-out rounded items-center
       ${
         active
           ? "top-5 left-1/2 -translate-x-1/2 w-[90%] sm:w-[95%] md:w-full md:max-w-[780px] lg:max-w-[1200px] bg-white shadow-md h-[70px] md:h-[80px]"
@@ -128,7 +122,7 @@ const Navbar = () => {
       }`}
         onMouseLeave={() => !active && setMenuOpen(false)}
       >
-        <div className="flex items-center justify-between h-full px-4 relative">
+        <div className="flex items-center justify-between h-full px-8 relative">
           {/* Logo + Nama */}
           <div className="flex items-center gap-3 transition-all duration-500">
             <img
@@ -150,33 +144,41 @@ const Navbar = () => {
           </div>
 
           {/* Menu Desktop */}
-          <div
-            className={`hidden md:flex gap-6 text-black font-semibold transition-all duration-500 ${
-              active
-                ? "opacity-100 visible"
-                : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"
-            }`}
-          >
-            <a href="#tentang">Tentang</a>
-            <a href="#layanan">Layanan</a>
-            <a href="#kontak">Kontak</a>
-          </div>
+          <div className="flex items-center gap-6 text-black font-semibold">
+            {/* Navigation links */}
+            <div
+              className={`hidden md:flex gap-6 transition-all duration-500 ${
+                active
+                  ? "opacity-100 visible"
+                  : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"
+              }`}
+            >
+              <a href="#tentang">Tentang</a>
+              <a href="#layanan">Layanan</a>
+              <a href="#kontak">Kontak</a>
+            </div>
 
-          {/* Tombol Cart */}
-          <div
-            className={`flex items-center cursor-pointer relative ${
-              active
-                ? "opacity-100 visible"
-                : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"
-            }`}
-            onClick={() => setSidebarOpen(true)}
-          >
-            <FaShoppingCart className="text-2xl text-black" id="cart-icon" />
-            {cart.length > 0 && (
-              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
-                {cart.length}
+            {/* Cart button */}
+            <div
+              className={`order-new-page2 group flex items-center cursor-pointer relative ${
+                active
+                  ? "opacity-100 visible"
+                  : "opacity-0 invisible group-hover:opacity-100 group-hover:visible"
+              }`}
+              onClick={() => setSidebarOpen(true)}
+            >
+              <FaOpencart className="text-3xl translate-x-4 group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-800 ease-out" id="cart-icon" />
+              <span className="ml-2 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-800 ease-out">
+               <span className="hidden md:group-hover:block">
+                Buat Pesanan
+               </span>
               </span>
-            )}
+              {cart.length > 0 && (
+                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+                  {cart.length}
+                </span>
+              )}
+            </div>
           </div>
         </div>
       </nav>
