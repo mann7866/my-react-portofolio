@@ -16,20 +16,20 @@ const Footer = () => {
             {/* Kontak */}
             <div className="flex flex-col gap-2 text-lg">
               <a
-                href="https://wa.me/6281234567890"
+                href="https://wa.me/6281235117136"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 hover:text-green-500 transition-colors"
               >
                 <i className="ri-whatsapp-fill"></i>
-                <span className="text-sm">+62 812-3456-7890</span>
+                <span className="text-sm">+62-812-3511-7136</span>
               </a>
               <a
-                href="mailto:rohman@example.com"
+                href="mailto:rohman040706@gmail.com"
                 className="flex items-center gap-2 hover:text-red-500 transition-colors"
               >
                 <i className="ri-mail-fill"></i>
-                <span className="text-sm">rohman@example.com</span>
+                <span className="text-sm">rohman040706@gmail.com</span>
               </a>
             </div>
           </div>

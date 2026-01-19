@@ -140,7 +140,7 @@ export const listTools = [
     nama: "Microsoft Word",
     ket: "Office Application",
     dad: "1500",
-    status: "I'm Intermediate in M Word"
+    status: "I'm Beginner in M Word"
   },
   {
     id: 14,
@@ -148,7 +148,7 @@ export const listTools = [
     nama: "Microsoft Excel",
     ket: "Office Application",
     dad: "1600",
-    status: "I'm Intermediate in M Excel"
+    status: "I'm Beginner in M Excel"
   },
   // {
   //   id: 15,
@@ -164,7 +164,7 @@ export const listTools = [
     nama: "Spreadsheet",
     ket: "Office Application",
     dad: "1800",
-    status: "I'm Intermediate in Spreadsheet"
+    status: "I'm Beginner in Spreadsheet"
   },
   {
     id: 19,

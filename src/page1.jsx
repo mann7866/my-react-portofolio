@@ -55,7 +55,7 @@ export default function Page1() {
                 </p>
                 <div className="flex items-center sm:gap-4 gap-2">
                   <a
-                    href="https://drive.google.com/file/d/1Ah0BTLs_K0B2RWpYCxy4b30EYKT-Rdwg/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1heqF66hz6ktuTh3vIFW0_1xmBXalg4zM/view?usp=drive_link"
                     className="bg-violet-700 rounded-md px-3 py-2 sm:px-4 sm:py-3 text-sm sm:text-base hover:bg-violet-600"
                   >
                     Download CV <i className="ri-download-2-line ri-lg"></i>
